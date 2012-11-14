@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Light" />
+    
+    <style name="subTheme"></style>
+    
+	<style name="CustomTitleTheme" parent="android:Theme">
+	  <item name="android:windowTitleSize">60dip</item>'
+	  <item name="android:windowTitleBackgroundStyle">@style/WindowTitleBackground</item>
+	 </style>
+	
+	 <style name="WindowTitleBackground" parent="android:Theme">
+	  <item name="android:background">@android:color/transparent</item>
+	 </style>
+	 
+</resources>

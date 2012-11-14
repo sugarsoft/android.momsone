@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    
+    <Button
+        android:id="@+id/main_Button_10"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_10_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_10_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_11"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_11_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_11_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_12"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_12_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_12_desc"
+        android:textSize="10dp" />
+
+<!--  두번째 줄..  -->
+
+    <Button
+        android:id="@+id/main_Button_13"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_13_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_13_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_14"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_14_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_14_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_15"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_15_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_15_desc"
+        android:textSize="10dp" />
+
+    <!--  세번째 줄..  -->
+    
+    <Button
+        android:id="@+id/main_Button_16"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="215dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_16_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_16_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_17"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="215dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_17_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_17_desc"
+        android:textSize="10dp" />
+	<!-- 
+    <Button
+        android:id="@+id/main_Button_18"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="215dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_18_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_18_desc"
+        android:textSize="10dp" />
+     -->  
+
+</RelativeLayout>
+    
+    

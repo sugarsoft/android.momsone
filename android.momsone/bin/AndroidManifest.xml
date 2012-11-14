@@ -1,0 +1,894 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.momsone"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+	<!-- This app has permission to register and receive message -->
+	<!-- 앱이 메시지를 등록하고 받을 수 있는 권한을 획득한다.-->
+	<!-- 전화 걸기 퍼미션 -->
+    <uses-permission android:name="android.permission.CALL_PHONE" ></uses-permission>
+    <!-- 네트워크 접속 권한 -->
+	<uses-permission android:name="android.permission.INTERNET" ></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<!-- GCM을 받으려면 구글 계정 필요 -->
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.USE_CREDENTIALS" /> 
+	<!-- 자신의 전화 번호 구하는 퍼미션 -->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<!-- 메시지 받을 때 wake up 하기 위해 -->
+	<uses-permission android:name="android.permission.WAKE_LOCK"/>
+	<!-- GCM 받기 -->
+	<uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+	<!-- GCM 관련 퍼미션 -->
+	<uses-permission android:name="petronetmobile.android.permission.C2D_MESSAGE"/>	
+	<permission android:name="petronetmobile.android.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<!--  네트워크 접속 관련 퍼미션 -->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/CustomTitleTheme" >
+        
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        
+        <activity
+            android:name=".subActivity"
+            android:label="@string/title_activity_sub" >
+            <intent-filter>
+                <action android:name="android.intent.action.SUB" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".sub_1"
+            android:label="@string/title_activity_sub" >
+            <intent-filter>
+                <action android:name="android.intent.action.SUB" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".titleActivity"
+            android:label="@string/title_activity_title" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name=".loginActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".noticeActivity"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+         <!-- iOneHome -->
+        
+        
+        <activity
+            android:name=".iOneHome.absense"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.album_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.album_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.freeboard_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>          
+        <activity
+            android:name=".iOneHome.freeboard_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.freeboard_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.mantoman_comp_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.mantoman_comp_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                        
+
+        <activity
+            android:name=".iOneHome.mantoman_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.mantoman_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>  
+        <activity
+            android:name=".iOneHome.mantoman"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.Msg_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.notify_home_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>      
+        <activity
+            android:name=".iOneHome.notify_home_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".iOneHome.notify_school_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".iOneHome.receiveMsg_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.receiveMsg_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.receiver_guardian"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.receiver_teacher"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.rollbook"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneHome.saveMsg_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.saveMsg_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>              
+        <activity
+            android:name=".iOneHome.sendMsg_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                
+        <activity
+            android:name=".iOneHome.sendMsg_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>              
+                
+        
+        
+        
+        
+        
+        <!-- iOneEtc -->
+        <activity
+            android:name=".iOneEtc.moms_noti_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".iOneEtc.moms_noti_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".iOneEtc.offer_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneEtc.offer_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        <activity
+            android:name=".iOneEtc.offer_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>               
+        <activity
+            android:name=".iOneEtc.school_info"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>               
+        
+        <!-- iOneAlimi -->
+        <activity
+            android:name=".iOneAlimi.diet_baby"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>               
+        <activity
+            android:name=".iOneAlimi.diet_babyfood"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>                 
+        <activity
+            android:name=".iOneAlimi.diet_child"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".iOneAlimi.diet_photo"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>          
+        <activity
+            android:name=".iOneAlimi.homereport_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>          
+        <activity
+            android:name=".iOneAlimi.homereport_view_comp"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".iOneAlimi.homereport_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>              
+        <activity
+            android:name=".iOneAlimi.medicine_comp_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>              
+        <activity
+            android:name=".iOneAlimi.medicine_comp_view1"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".iOneAlimi.medicine_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".iOneAlimi.medicine_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".iOneAlimi.medicine_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".iOneAlimi.news_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".iOneAlimi.news_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        
+        
+        
+        <!-- iOneAlbum -->
+        <activity
+            android:name=".iOneAlbum.recent_album_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".iOneAlbum.recent_album_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".iOneAlbum.class_album_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".iOneAlbum.class_album_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+                
+        <activity
+            android:name=".iOneAlbum.class_story_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".iOneAlbum.class_story_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".iOneAlbum.class_story_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>            
+        
+                
+        <activity
+            android:name=".iOneAlbum.festival_album_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".iOneAlbum.festival_album_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        
+        
+        
+        <!--  Education -->
+        <activity
+            android:name=".Education.entrance_comp_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>            
+        <activity
+            android:name=".Education.entrance_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>          
+        <activity
+            android:name=".Education.entrance_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>               
+        <activity
+            android:name=".Education.entrance_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>               
+        <activity
+            android:name=".Education.school_clip_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".Education.school_etc"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".Education.school_kindergarten"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".Education.school_nursery"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>   
+        <activity
+            android:name=".Education.school_sch_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".Education.school_sch_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".Education.standby_cancel_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        <activity
+            android:name=".Education.standby_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>          
+        <activity
+            android:name=".Education.standby_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        <activity
+            android:name=".Education.standby_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>      
+        
+        
+        <!-- Community -->
+        
+        <activity
+            android:name=".Community.com_edu_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_edu_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_edu_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>           
+        
+        
+        <activity
+            android:name=".Community.com_enter_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_enter_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_enter_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> 
+        
+        <activity
+            android:name=".Community.com_free_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_free_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_free_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        
+        <activity
+            android:name=".Community.com_homor_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_humor_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_humor_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        
+
+        <activity
+            android:name=".Community.com_info_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_info_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_info_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>        
+        
+        
+        <activity
+            android:name=".Community.com_society_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_society_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_society_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        
+
+        <activity
+            android:name=".Community.com_talk_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_talk_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_talk_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        
+        
+        
+        <activity
+            android:name=".Community.com_unfair_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_unfair_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_unfair_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        
+        <activity
+            android:name=".Community.com_worry_list"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>             
+        <activity
+            android:name=".Community.com_worry_view"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>       
+        <activity
+            android:name=".Community.com_worry_write"
+            android:label="@string/title_activity_login" >
+            <intent-filter>
+                <action android:name="android.intent.action.title" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>         
+        
+        
+        
+        
+        
+        
+     </application>
+    
+</manifest>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+    
+    <Button
+        android:id="@+id/main_Button_27"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_27_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_27_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_28"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_28_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_28_desc"
+        android:textSize="10dp" />
+
+    <Button
+        android:id="@+id/main_Button_29"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_29_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_29_desc"
+        android:textSize="10dp" />
+
+<!--  두번째 줄..  -->
+
+    <Button
+        android:id="@+id/main_Button_30"
+        style="@style/AppTheme"
+        android:layout_width="60dp"
+        android:layout_height="76dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="125dp"
+        android:background="@drawable/btn_sample"
+        android:contentDescription="@string/main_button_30_desc"
+        android:gravity="bottom|center_horizontal"
+        android:padding="0dp"
+        android:text="@string/main_button_30_desc"
+        android:textSize="10dp" />
+
+
+
+        
+
+</RelativeLayout>
+    
+    
