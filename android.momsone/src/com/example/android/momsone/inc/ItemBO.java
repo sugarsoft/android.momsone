@@ -28,9 +28,25 @@ public class ItemBO {
     private String description;
     private String time;
     private String read;
+    private String img;
+    private String subject;
+
     
     
-    public String getRead() {
+    
+    public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public String getRead() {
 		return read;
 	}
 	public void setRead(String read) {
@@ -51,9 +67,7 @@ public class ItemBO {
 
     
     public static ArrayList getItems( String code ) {
-    	
-    	System.out.println("야호");
-    	
+    	    	
     	String revCode = code;
     	
         Log.i("moms", "ID : " + Build.ID);
@@ -120,9 +134,22 @@ public class ItemBO {
                   JSONObject json_data = jArray.getJSONObject(i);
                   item = new ItemBO();
                     
-                  item.setTime(json_data.getString("TIME"));
-                  item.setName(json_data.getString("NAME"));
-                  item.setDescription(json_data.getString("DESC"));
+                  try {
+	                  if(json_data.has("TIME") == true )
+	                	  item.setTime(json_data.getString("TIME"));
+	                  if(json_data.has("NAME") == true )
+	                	  item.setName(json_data.getString("NAME"));
+	                  if(json_data.has("DESC") == true )
+	                	  item.setDescription(json_data.getString("DESC"));
+	                  if(json_data.has("IMG") == true )
+	                	  item.setImg(json_data.getString("IMG"));
+	                  if(json_data.has("SUBJECT") == true )
+	                	  item.setSubject(json_data.getString("SUBJECT"));
+                  //Log.d("moms",item.getTime() + "," + item.getName() + ","+item.getDescription() + "," + item.getImg() + "," + item.getSubject());
+                  } catch (Exception e) {
+                	  Log.d("moms",e.toString());
+                  }
+                  
                   
                   list.add(item);
 

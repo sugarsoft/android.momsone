@@ -1,9 +1,12 @@
 package com.example.android.momsone.inc;
 
 
+import com.example.android.momsone.MainActivity;
 import com.example.android.momsone.R;
 import com.example.android.momsone.R.id;
 import com.example.android.momsone.R.layout;
+import com.example.android.momsone.iOneHome.Msg_write;
+import com.example.android.momsone.iOneHome.mantoman;
 
 import android.app.Activity;
 import android.content.Context;
@@ -67,13 +70,15 @@ public class Footer extends LinearLayout {
             	break;
             	
             case R.id.footer_btn2:
-                //myIntent = new Intent(mContext, Activity2.class);
-                Toast.makeText(mContext, "2¹øÂ° ¹öÆ°ÀÌ ´­·ÁÁ³½À´Ï´Ù", 0);
-                //mActivity.startActivity(myIntent);
+                myIntent = new Intent(mContext, Msg_write.class);
+                //Toast.makeText(mContext, "2ï¿½ï¿½Â° ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½", 0);
+                //intentsub = new Intent( MainActivity.this, mantoman.class );
+
+                mActivity.startActivity(myIntent);
                 break;
                 
             case R.id.footer_btn3:
-            	Toast.makeText(mContext, "3¹øÂ° ¹öÆ°ÀÌ ´­·ÁÁ³½À´Ï´Ù", 0);
+            	Toast.makeText(mContext, "3ï¿½ï¿½Â° ï¿½ï¿½Æ°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½", 0);
             	break;
             }
  

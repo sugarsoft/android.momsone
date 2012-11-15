@@ -23,8 +23,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
 import android.widget.ViewFlipper;
 
@@ -36,7 +34,7 @@ public class MainActivity extends Activity {
 	Footer footer;
 	
 	
-	
+	/// first modify    또 수정 맨날 수정
 
 	
     @Override
@@ -46,6 +44,7 @@ public class MainActivity extends Activity {
         
         startActivity(new Intent(this, titleActivity.class));
 		
+        //requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.header);
@@ -55,10 +54,8 @@ public class MainActivity extends Activity {
     		    
         m_viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
         m_viewFlipper.setOnTouchListener(MyTouchListener);	    
+        
         startView = m_viewFlipper.getCurrentView().getId();
-        
-        
-
     
 	           
         // 버튼 선언
