@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlt_main"
+    android:layout_width="fill_parent"
+    android:layout_height="67dp"
+    android:background="#ffffff"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/tv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="67dp"
+			android:layout_gravity="center"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="264dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="time" />
+
+        <TextView
+            android:id="@+id/tv_Subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10px"
+            android:text="Subject" />
+    </LinearLayout>
+
+</LinearLayout>
