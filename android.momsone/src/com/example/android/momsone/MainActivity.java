@@ -44,7 +44,6 @@ public class MainActivity extends Activity {
         
         startActivity(new Intent(this, titleActivity.class));
 		
-        //requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         //getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE, R.layout.header);
